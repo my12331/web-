@@ -1,55 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web前端设计</title>
-</head>
-<body>
-    <h1>这是我的第一个页面中的一级标题</h1>
-     <li><a href="#home">首页</a></li>
-     <li><a href="#about">关于我们</a></li>
-     <li><a href="#services">服务</a></li>
-     <li><a href="#contact">联系我们</a></li>
-     </ul>
-            </nav>
-        </header>
-        
-        <div class="container">
-            <section id="home">
-                <h2>9/h2>
-                <p>建议</p>
-            </section>
-            
-            <section id="about">
-                <h2>关于我们</h2>
-                <p>较为简单的展示html内容。</p>
-            </section>
-            
-            <section id="services">
-                <h2>二级标题</h2>
-                <ul>
-                    <li>HTML/CSS/JavaScript开发</li>
-                    <li>区块元素</li>
-                    <li>内容组织元素</li>
-                    <li>文本语义元素</li>
-                    <li>编辑相关元素</li>
-                    <li>嵌入内容元素</li>
-                    <li>表格元素</li>
-                    <li>表单元素</li>
-
-                </ul>
-            </section>
-            
-            <section id="contact">
-                <h2>如有疑问，请联系我们</h2>
-                <form>
-                    <label for="name">姓名:</label>
-                    <input type="text" id="name" name="name" required><br><br>
-                    <label for="email">电子邮件:</label>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="message">留言:</label><br>
-                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-                    <input type="submit" value="提交">
-                </form>
+ <html lang="zh-CN">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>前端学习作品集</title>
+     <style>
+         :root {
+             --primary-color: #4361ee;
+             --text-color: #2b2d42;
+         }
+         body {
+             font-family: 'Segoe UI', sans-serif;
+             line-height: 1.6;
+             color: var(--text-color);
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 20px;
+         }
+         header {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             margin-bottom: 40px;
+         }
+         .project-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+             gap: 20px;
+         }
+         .project-card {
+             border: 1px solid #ddd;
+             border-radius: 8px;
+             padding: 15px;
+             transition: transform 0.3s;
+         }
+         .project-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+         }
+     </style>
+ </head>
+ <body>
+     <header>
+         <h1>我的前端学习旅程</h1>
+         <div class="wakatime-badge">
+             <img src="https://wakatime.com/badge/user/[你的ID]/project/[项目名].svg" 
+                  alt="WakaTime统计">
+         </div>
+     </header>
+     
+     <section class="project-grid">
+         <article class="project-card">
+             <h3>CSS动画作品</h3>
+             <p>使用CSS3实现的加载动画效果</p>
+             <a href="/projects/loader-demo">查看项目</a>
+         </article>
+         <!-- 更多项目卡片... -->
+     </section>
+ 
+     <footer>
+         <p>© 2023 由GitHub Pages托管 | 最后更新: <span id="update-date"></span></p>
+     </footer>
+ 
+     <script>
+         // 自动更新日期
+         document.getElementById('update-date').textContent = 
+             new Date().toLocaleDateString();
+     </script>
+ </body>
+ </html>
           
