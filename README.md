@@ -3,100 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web课程框架</title>
+    <title>摄影摄像技术课程</title>
     <style>
-        /* 基础样式重置 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
         
-        /* 布局容器 */
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        body {
+            background: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
         
-        /* 头部样式 */
-        header { 
-            background: #2c3e50; 
-            color: white;
-            padding: 1.5rem 0;
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
             text-align: center;
-            margin-bottom: 20px;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        /* 内容区块通用样式 */
-        .section {
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 30px;
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
         
-        /* 教师简介区域 */
-        .teacher-profile {
-            display: flex;
-            gap: 20px;
+        h2 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: #f8f8f8;
+            border-left: 4px solid #3498db;
+            padding-left: 1rem;
         }
-        .teacher-photo { width: 150px; height: 150px; background: #eee; }
-        .teacher-info { flex: 1; }
         
-        /* 响应式调整 */
+        /* 模块卡片样式 */
+        .module {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        /* 响应式布局 */
         @media (max-width: 768px) {
-            .teacher-profile { flex-direction: column; }
-            .teacher-photo { width: 100%; height: 200px; }
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- 头部区域 -->
-    <header>
-        <div class="container">
-            <h1>课程标题</h1>
-            <p>课程副标题或学期信息</p>
-        </div>
-    </header>
-    
-    <!-- 主内容区 -->
     <div class="container">
-        <!-- 1. 教师简介模块 -->
-        <section class="section teacher-section">
+        <header>
+            <h1>摄影摄像技术课程</h1>
+            <p>探索视觉艺术的无限可能</p>
+        </header>
+        
+        <!-- 教师简介模块 -->
+        <section class="module">
             <h2>教师简介</h2>
-            <div class="teacher-profile">
-                <div class="teacher-photo"><!-- 照片占位 --></div>
-                <div class="teacher-info">
-                    <!-- 教师信息内容 -->
-                </div>
+            <div class="content">
+                <!-- 内容占位 -->
             </div>
         </section>
         
-        <!-- 2. 课堂作业模块 -->
-        <section class="section assignments-section">
-            <h2>课堂作业</h2>
-            <div class="assignments-container">
-                <!-- 作业列表内容 -->
-            </div>
-        </section>
-        
-        <!-- 3. 学生名单模块 -->
-        <section class="section students-section">
+        <!-- 学生名单模块 -->
+        <section class="module">
             <h2>学生名单</h2>
-            <div class="student-list">
-                <!-- 学生名单内容 -->
+            <div class="content">
+                <!-- 内容占位 -->
             </div>
         </section>
         
-        <!-- 4. 课后作业哲学选项 -->
-        <section class="section philosophy-section">
-            <h2>课后作业哲学</h2>
-            <div class="philosophy-options">
-                <!-- 单选选项内容 -->
+        <!-- 课堂作业模块 -->
+        <section class="module">
+            <h2>课堂作业</h2>
+            <div class="content">
+                <!-- 内容占位 -->
+            </div>
+        </section>
+        
+        <!-- 课后作业模块 -->
+        <section class="module">
+            <h2>课后作业</h2>
+            <div class="content">
+                <!-- 内容占位 -->
             </div>
         </section>
     </div>
-    
-    <!-- 页脚 -->
-    <footer class="section">
-        <div class="container">
-            <!-- 页脚内容 -->
-        </div>
-    </footer>
 </body>
 </html>
+
