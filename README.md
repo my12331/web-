@@ -1,40 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>我的前端作品集</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web课程框架</title>
     <style>
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* 基础样式重置 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        
+        /* 布局容器 */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        /* 头部样式 */
+        header { 
+            background: #2c3e50; 
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        /* 内容区块通用样式 */
+        .section {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding: 20px;
+            margin-bottom: 30px;
         }
-        .project-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 10px 0;
-            transition: transform 0.3s;
+        
+        /* 教师简介区域 */
+        .teacher-profile {
+            display: flex;
+            gap: 20px;
         }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .teacher-photo { width: 150px; height: 150px; background: #eee; }
+        .teacher-info { flex: 1; }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .teacher-profile { flex-direction: column; }
+            .teacher-photo { width: 100%; height: 200px; }
         }
     </style>
 </head>
 <body>
+    <!-- 头部区域 -->
     <header>
-        <h1>欢迎来到我的学习空间</h1>
-        <p>Web前端开发课程作品展示</p>
+        <div class="container">
+            <h1>课程标题</h1>
+            <p>课程副标题或学期信息</p>
+        </div>
     </header>
     
-    <section class="projects">
-        <div class="project-card">
-            <h3>项目1：个人简历</h3>
-            <p>使用HTML+CSS制作的响应式简历</p>
-            <a href="#">查看项目</a>
+    <!-- 主内容区 -->
+    <div class="container">
+        <!-- 1. 教师简介模块 -->
+        <section class="section teacher-section">
+            <h2>教师简介</h2>
+            <div class="teacher-profile">
+                <div class="teacher-photo"><!-- 照片占位 --></div>
+                <div class="teacher-info">
+                    <!-- 教师信息内容 -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2. 课堂作业模块 -->
+        <section class="section assignments-section">
+            <h2>课堂作业</h2>
+            <div class="assignments-container">
+                <!-- 作业列表内容 -->
+            </div>
+        </section>
+        
+        <!-- 3. 学生名单模块 -->
+        <section class="section students-section">
+            <h2>学生名单</h2>
+            <div class="student-list">
+                <!-- 学生名单内容 -->
+            </div>
+        </section>
+        
+        <!-- 4. 课后作业哲学选项 -->
+        <section class="section philosophy-section">
+            <h2>课后作业哲学</h2>
+            <div class="philosophy-options">
+                <!-- 单选选项内容 -->
+            </div>
+        </section>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="section">
+        <div class="container">
+            <!-- 页脚内容 -->
         </div>
-        <!-- 更多项目卡片... -->
-    </section>
+    </footer>
 </body>
 </html>
